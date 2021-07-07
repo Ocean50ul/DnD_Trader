@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block bodyClass %}backgroundMarket{% endblock %}
+
+
+{% block body %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<input type="button" id="createCommonButton" class="createButton" value="Create Common" title="Создает обычного горожанина." onclick="generateNewCommon()">
+<input type="button" id="createHeroButton" class="createButton" value="Create Hero" title="Создает героя" onclick="generateNewNormal()">
+
+<div class="sizeBlock">
+    <div class="citySizeAndRace">
+        <input type="radio" name="citySize" id="cs1" value="small" checked>
+        <label for="cs1" id="small">Деревенька</label>
+    </div>
+        
+    <div class="citySizeAndRace">
+        <input type="radio" name="citySize" id="cs2" value="middle">
+        <label for="cs2" id="middle">Бург</label>
+    </div>
+
+    <div class="citySizeAndRace">
+        <input type="radio" name="citySize" id="cs3" value="large">
+        <label for="cs3" id="large">Мегаполис</label>
+    </div> 
+</div>
+
+<br>
+<div class="raceBlock">
+    <div class="citySizeAndRace">
+        <input type="radio" name="cityRace" id="cr1" value="human" checked>
+        <label for="cr1">Городище людей</label>
+    </div>
+
+    <div class="citySizeAndRace">
+        <input type="radio" name="cityRace" id="cr2" value="elf">
+        <label for="cr2">Убежище эльфов</label>
+    </div>
+
+    <div class="citySizeAndRace">
+        <input type="radio" name="cityRace" id="cr3" value="dwarf">
+        <label for="cr3">Копи дварфов</label>
+    </div>
+            
+    <div class="citySizeAndRace">
+        <input type="radio" name="cityRace" id="cr4" value="gnome">
+        <label for="cr4">Городок гномов</label>
+    </div>
+
+    <div class="citySizeAndRace">
+        <input type="radio" name="cityRace" id="cr5" value="hafling">
+        <label for="cr5">Деревня хафлингов</label>
+    </div>
+</div>
+
+<div class="notes">
+    <p id="noteSmall">Малое</p>
+    <p id="noteMiddle">Среднее</p>
+    <p id="noteLarge">Большое</p>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <div class="show" id="this" hidden>Click here please!</div>
+    <div class="sizeBlock">
+        <div class="citySizeAndRace">
+            <input type="radio" name="citySize" id="cs1" value="male" checked>
+            <label for="cs1" id="small">Male</label>
+        </div>
+            
+        <div class="citySizeAndRace">
+            <input type="radio" name="citySize" id="cs2" value="female">
+            <label for="cs2" id="middle">Female</label>
+        </div>
+    
+        <div class="citySizeAndRace">
+            <input type="radio" name="citySize" id="cs3" value="male">
+            <label for="cs3" id="large">Male</label>
+        </div> 
+    </div>
+    <button id="ajax"> click it</button>
+</body>
+</html>
